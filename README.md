@@ -19,6 +19,8 @@ comma separated list of track codes and return the total price.
 ### Requirements
 
 Perl
+cpanminus (for installing the other CPAN modules)
+Text::CSV
 
 ### To run the simple test
 
