@@ -6,6 +6,14 @@ language recently.
 
 PRs and comments on better syntax/language features to use very welcome.
 
+## Description of code and tests
+
+For each language, the simple test tests a function or method that adds one to
+the number passed in.
+
+The CSV test tests the code's ability to read in a music catalogue, accept a
+comma separated list of track codes and return the total price.
+
 ## Perl
 
 ### Requirements
