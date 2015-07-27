@@ -36,7 +36,7 @@ sub sum_tracks_by_code {
         if ( '' ne $track ) {
             my $csv_track = $self->{"rows{$track}"};
             if ( $track eq $csv_track->{'track_upc'} ) {
-                $track_cost = $track_cost + $csv_track->{'track_price'};
+                $track_cost += $csv_track->{'track_price'};
             }
         }
     }
