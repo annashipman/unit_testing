@@ -12,15 +12,13 @@ sub new {
     my $self = {};
     bless $self, $class;
 
-    my $fh = $self->{'csv_handle'};
-
-    $self->{'csv'} = Text::CSV->new ( { binary => 1 } );
-    open $fh, '<:encoding(utf8)', $csv_file
+    my $csv = Text::CSV->new ( { binary => 1 } );
+    open my $fh, '<:encoding(utf8)', $csv_file
         or return undef;
 
-    $self->{'csv'}->column_names ( $self->{'csv'}->getline ( $fh ) );
+    $csv->column_names ( $csv->getline ( $fh ) );
 
-    while ( my $row = $self->{'csv'}->getline_hr ( $fh ) ) {
+    while ( my $row = $csv->getline_hr ( $fh ) ) {
         my $track_upc = $row->{'track_upc'};
         $self->{"rows{$track_upc}"} = $row;
     }
