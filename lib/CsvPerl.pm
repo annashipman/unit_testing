@@ -44,4 +44,13 @@ sub sum_tracks_by_code {
     return $track_cost;
 }
 
+sub get_details_by_code {
+    my $self      = shift;
+    my $track_upc = shift;
+
+    my $csv_track = $self->{"rows{$track_upc}"};
+
+    return $csv_track;
+}
+
 1;
