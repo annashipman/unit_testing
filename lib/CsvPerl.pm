@@ -28,9 +28,9 @@ sub new {
 }
 
 sub sum_tracks_by_code {
-    my $self = shift;
-    my @track_upcs = @_;
-    my $track_cost = 0;
+    my $self        = shift;
+    my @track_upcs  = @_;
+    my $track_cost  = 0;
 
     foreach my $track ( @track_upcs ) {
         if ( '' ne $track ) {
