@@ -16,6 +16,10 @@ Vagrant.configure(2) do |config|
     # Perl
     sudo apt-get install -y cpanminus
     cpanm Text::CSV
+
+    # Python
+    sudo apt-get install -y python-pip
+    sudo pip install pytest
   SHELL
 
 end
